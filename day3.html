@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.7.1.min.js"></script>
+</head>
+<style>
+    .box{
+        width: 100px;
+        height: 100px;
+        position: relative;
+        background-color: orangered;
+    }
+</style>
+<body>
+    <button id="btn">Animation</button>
+    <div class="box"></div>
+
+    <script>
+        $(document).ready(function(){
+            $('#btn').hover(function(){
+                $('.box')
+                .animate({ left : '300PX' })
+                .animate({ height : '150px' , width : '150px' })
+            },function(){
+                $('.box')
+                .animate({ left : ''})
+                .animate({ height: '100px' , width : '100px'})
+            })
+        })
+    </script>
+</body>
+</html>
